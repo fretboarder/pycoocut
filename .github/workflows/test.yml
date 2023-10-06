@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup-poetry:
-    if: !contains(github.head_ref, 'release-please')
+    if: ${{ !contains(github.head_ref, 'release-please') }}
     runs-on: ubuntu-latest
 
     strategy:
