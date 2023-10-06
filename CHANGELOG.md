@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/fretboarder/citemplate/compare/v0.1.6...v0.1.7) (2023-10-06)
+
+
+### Bug Fixes
+
+* add ruff and mypy checks ([0ef2b76](https://github.com/fretboarder/citemplate/commit/0ef2b7602c08206e54ea04a612300c07125a7403))
+
 ## [0.1.6](https://github.com/fretboarder/citemplate/compare/v0.1.5...v0.1.6) (2023-10-06)
 
 
