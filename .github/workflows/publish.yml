@@ -29,7 +29,7 @@ jobs:
       run: |
        poetry config virtualenvs.in-project true
        poetry config repositories.testpypi https://test.pypi.org/legacy/
-       poetry config poetry pypi-token.testpypi ${{ secrets.PYPI_TEST_TOKEN }}
+       poetry config pypi-token.testpypi ${{ secrets.PYPI_TEST_TOKEN }}
 
     - name: Build and Publish
       run: poetry publish --build
