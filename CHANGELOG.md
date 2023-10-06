@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.9](https://github.com/fretboarder/citemplate/compare/v0.1.8...v0.1.9) (2023-10-06)
+
+
+### Bug Fixes
+
+* conditionally run test workflow ([24f98b7](https://github.com/fretboarder/citemplate/commit/24f98b718809fd3bf59c627a3a4d8bc4f39f1c76))
+* update condition ([f6b7f22](https://github.com/fretboarder/citemplate/commit/f6b7f22d98eebcf758480c1406a28941ee1e9368))
+
 ## [0.1.8](https://github.com/fretboarder/citemplate/compare/v0.1.7...v0.1.8) (2023-10-06)
 
 
