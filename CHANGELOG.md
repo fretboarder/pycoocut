@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.1.8](https://github.com/fretboarder/citemplate/compare/v0.1.7...v0.1.8) (2023-10-06)
+
+
+### Bug Fixes
+
+* don't use jobs ([ccefad5](https://github.com/fretboarder/citemplate/commit/ccefad56adca6d324fbc54e66a23cc5c361afe74))
+
+## [0.1.7](https://github.com/fretboarder/citemplate/compare/v0.1.6...v0.1.7) (2023-10-06)
+
+
+### Bug Fixes
+
+* add ruff and mypy checks ([0ef2b76](https://github.com/fretboarder/citemplate/commit/0ef2b7602c08206e54ea04a612300c07125a7403))
+
+## [0.1.6](https://github.com/fretboarder/citemplate/compare/v0.1.5...v0.1.6) (2023-10-06)
+
+
+### Bug Fixes
+
+* Update publish.yml ([6140d09](https://github.com/fretboarder/citemplate/commit/6140d0942ea09cf60bd01c1144490267592e45e0))
+
+## [0.1.5](https://github.com/fretboarder/citemplate/compare/v0.1.4...v0.1.5) (2023-10-06)
+
+
+### Bug Fixes
+
+* status badges for README ([161a3a9](https://github.com/fretboarder/citemplate/commit/161a3a9194688e03fd645d684e6e2b30835a8db4))
+
 ## [0.1.4](https://github.com/fretboarder/citemplate/compare/v0.1.3...v0.1.4) (2023-10-06)
 
 
