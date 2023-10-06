@@ -30,6 +30,3 @@ jobs:
 
     - name: Run tests
       run: poetry run pytest tests
-
-    - name: Deactivate virtual environment
-      run: deactivate
