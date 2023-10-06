@@ -22,12 +22,14 @@ jobs:
     - name: Install dependencies
       run: |
         curl -sSL https://install.python-poetry.org | python3 -
-        python3 -m venv venv
-        source venv/bin/activate
+
+    - name: Prepare poetry
+      run: |
+        poetry config virtualenvs.in-project true
         poetry install
 
     - name: Run tests
-      run: poetry run pytest
+      run: poetry run pytest tests
 
     - name: Deactivate virtual environment
       run: deactivate
