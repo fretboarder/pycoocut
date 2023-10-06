@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/fretboarder/citemplate/compare/v0.1.7...v0.1.8) (2023-10-06)
+
+
+### Bug Fixes
+
+* don't use jobs ([ccefad5](https://github.com/fretboarder/citemplate/commit/ccefad56adca6d324fbc54e66a23cc5c361afe74))
+
 ## [0.1.7](https://github.com/fretboarder/citemplate/compare/v0.1.6...v0.1.7) (2023-10-06)
 
 
