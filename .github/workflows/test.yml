@@ -5,9 +5,12 @@ on:
     branches:
       - "*-dev"
   pull_request:
+    types:
+      - closed
 
 jobs:
   setup-poetry:
+    if: ${{ !contains(github.head_ref, 'release-please') }}
     runs-on: ubuntu-latest
 
     strategy:
