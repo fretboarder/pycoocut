@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/fretboarder/citemplate/compare/v0.1.4...v0.1.5) (2023-10-06)
+
+
+### Bug Fixes
+
+* status badges for README ([161a3a9](https://github.com/fretboarder/citemplate/commit/161a3a9194688e03fd645d684e6e2b30835a8db4))
+
 ## [0.1.4](https://github.com/fretboarder/citemplate/compare/v0.1.3...v0.1.4) (2023-10-06)
 
 
