@@ -1,11 +1,11 @@
-name: pytest
+name: publish to pypi
 
 on:
   release:
     types: [published]
 
 jobs:
-  test:
+  publish-package:
     runs-on: ubuntu-latest
 
     strategy:
