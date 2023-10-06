@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/fretboarder/citemplate/compare/v0.1.1...v0.1.2) (2023-10-06)
+
+
+### Bug Fixes
+
+* Update publish.yml ([32c8761](https://github.com/fretboarder/citemplate/commit/32c8761daa3c7f5c21efc046a7dd99fd2d79970a))
+
 ## [0.1.1](https://github.com/fretboarder/citemplate/compare/v0.1.0...v0.1.1) (2023-10-06)
 
 
