@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "citemplate"
+version = "0.1.0"
+description = "My Python project template"
+authors = ["fretboarder <cini01@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+cli = 'citemplate.main:main'
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
+mypy = "^1.5.1"
+black = "^23.9.1"
+ruff = "^0.0.292"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
