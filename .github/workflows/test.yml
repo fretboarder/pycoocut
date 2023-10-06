@@ -32,26 +32,11 @@ jobs:
         poetry config virtualenvs.in-project true
         poetry install
 
-  run-linter:
-    needs:
-      - setup-poetry
-    runs-on: ubuntu-latest
-    steps:
     - name: Run ruff
       run: poetry run ruff citemplate
 
-  run-typecheker:
-    needs:
-      - setup-poetry
-    runs-on: ubuntu-latest
-    steps:
     - name: Run mypy
       run: poetry run mypy citemplate
 
-  run-pytest:
-    needs:
-      - setup-poetry
-    runs-on: ubuntu-latest
-    steps:
     - name: Run tests
       run: poetry run pytest -rA tests
