@@ -1,12 +1,12 @@
+import pytest
 from click.testing import CliRunner
-import citemplate.main as main
-from citemplate import _version
-import pytest as pt
+
+from citemplate import _version, main
 
 
-@pt.fixture
+@pytest.fixture()
 def client() -> CliRunner:
-    yield CliRunner()
+    return CliRunner()
 
 
 def test_version(client: CliRunner):
