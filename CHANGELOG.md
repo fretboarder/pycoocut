@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/fretboarder/citemplate/compare/v0.2.0...v0.3.0) (2023-10-08)
+
+
+### Features
+
+* remove publish workflow if not needed ([0234e84](https://github.com/fretboarder/citemplate/commit/0234e845083e12aafb00438dfd917bb8b78a21e9))
+
 ## [0.2.0](https://github.com/fretboarder/citemplate/compare/v0.1.19...v0.2.0) (2023-10-08)
 
 
