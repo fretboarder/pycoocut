@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.16](https://github.com/fretboarder/citemplate/compare/v0.1.15...v0.1.16) (2023-10-08)
+
+
+### Bug Fixes
+
+* dump github context ([a7e2fc3](https://github.com/fretboarder/citemplate/commit/a7e2fc379dc8366e2b5324851e4214679cff3f6b))
+
 ## [0.1.15](https://github.com/fretboarder/citemplate/compare/v0.1.14...v0.1.15) (2023-10-08)
 
 
