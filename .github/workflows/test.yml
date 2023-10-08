@@ -19,7 +19,7 @@ jobs:
       run: echo ${{ toJSON(github) }}
 
   lint-and-test:
-    # we don't have to run on the release-please branch
+    # we don't want to run on the release-please branch
     if: ${{ !startsWith(github.ref_name, 'release-please') }}
     runs-on: ubuntu-latest
 
