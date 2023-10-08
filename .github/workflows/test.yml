@@ -50,7 +50,7 @@ jobs:
     needs: [lint-and-test]
     runs-on: ubuntu-latest
     steps:
-    - name: Add a ready-for-release to the Main Branch
+    - name: Add the ready-for-release label to the Main Branch
       uses: actions/github-script@v5
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}

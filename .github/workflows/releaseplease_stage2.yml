@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   release-please:
-    # this job only runs when the original feature PR has been merged and tested
+    # this job only runs to create the final release
     if: ${{ startsWith(github.ref, 'refs/heads/main') && contains(github.head_ref, 'release-please') }}
     runs-on: ubuntu-latest
     steps:
@@ -20,17 +20,3 @@ jobs:
         package-name: citemplate
         token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
 
-    - name: Remove a Label from the Main Branch
-      uses: actions/github-script@v5
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const label = 'ready-for-release';
-
-          console.log(`Removing label '${label}' from '${github.context.ref}'`);
-          await github.issues.removeLabel({
-            owner: github.context.repo.owner,
-            repo: github.context.repo.repo,
-            issue_number: github.context.issue.number,
-            name: label,
-          });
