@@ -47,10 +47,10 @@ jobs:
         poetry install
 
     - name: Run ruff
-      run: poetry run ruff citemplate
+      run: poetry run nox -s ruff
 
     - name: Run mypy
-      run: poetry run mypy citemplate
+      run: poetry run nox -s mypy
 
     - name: Run tests with nox
       run: poetry run nox -s pytest

@@ -8,6 +8,13 @@ def ruff(session: nox.Session):
     session.run("ruff", "check", "citemplate")
 
 
+@nox.session
+def mypy(session: nox.Session):
+    """Running ruff"""
+    session.install("mypy", "click")
+    session.run("mypy", "citemplate")
+
+
 @nox.session()
 def pytest(session: nox.Session):
     """Running pytest"""
