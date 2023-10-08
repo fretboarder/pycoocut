@@ -21,6 +21,9 @@ jobs:
         project-structure: ["flat", "src"]
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: Set up Python 3.12
       uses: actions/setup-python@v2
       with:
@@ -32,7 +35,7 @@ jobs:
     - name: Run cookiecutter for ${{matrix.project-structure}} project structure
       run: |
         cookiecutter -f --no-input \
-          gh:${{github.repository}} \
+          ${{github.workspace}} \
           "project_name=Test Project" \
           cli_command=testrun \
           python_dep=^3.12 \
@@ -42,6 +45,6 @@ jobs:
     - name: Install poetry
       run: |
         pip install --user poetry
-        cd test_project
+        cd ${{github.workspace}}/test_project
         poetry install
         poetry run nox
