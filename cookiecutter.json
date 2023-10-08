@@ -5,5 +5,9 @@
     "author": "Anonymous",
     "cli_command": "{{ cookiecutter.project_slug}}",
     "python_dep": "^3.11",
-    "github_user": "fretboarder"
+    "github_user": "fretboarder",
+    "project_layout": [
+        "flat",
+        "src"
+    ]
 }

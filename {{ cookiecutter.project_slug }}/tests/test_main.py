@@ -1,7 +1,12 @@
 import pytest
 from click.testing import CliRunner
 
+{% if cookiecutter.project_layout == "src" -%}
+from src import _version
+from src.cli import main
+{%- else -%}
 from {{cookiecutter.project_slug}} import _version, main
+{%- endif %}
 
 
 @pytest.fixture()
