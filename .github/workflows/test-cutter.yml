@@ -32,12 +32,12 @@ jobs:
     - name: Run cookiecutter for ${{matrix.project-structure}} project structure
       run: |
         cookiecutter -f --no-input \
+          gh:${{github.repository}} \
           "project_name=Test Project" \
           cli_command=testrun \
           python_dep=^3.12 \
           project_layout=${{matrix.project-structure}}
-          publish_workflow=false \
-          https://github.com/fretboarder/pycoocut.git
+          publish_workflow=false
 
     - name: Install poetry
       run: |
