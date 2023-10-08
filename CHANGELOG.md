@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/fretboarder/citemplate/compare/v0.1.19...v0.2.0) (2023-10-08)
+
+
+### Features
+
+* src and flat layout ([6a590da](https://github.com/fretboarder/citemplate/commit/6a590dab5f2327745a0e5decdd04b4f1a120ffb9))
+
 ## [0.1.19](https://github.com/fretboarder/citemplate/compare/v0.1.18...v0.1.19) (2023-10-08)
 
 
