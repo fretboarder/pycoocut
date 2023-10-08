@@ -43,25 +43,3 @@ jobs:
 
     - name: Run tests with nox
       run: poetry run nox
-
-  set-release-ready-label:
-    # this job only runs when the tests after merging the PR to main were successful
-    if: ${{ startsWith(github.ref, 'refs/heads/main') && !contains(github.head_ref, 'release-please') }}
-    needs: [lint-and-test]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Add the ready-for-release label to the Main Branch
-      uses: actions/github-script@v5
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const label = 'ready-for-release';
-
-          console.log(`Adding label '${label}' to '${github.context.ref}'`);
-          await github.issues.addLabels({
-            owner: github.context.repo.owner,
-            repo: github.context.repo.repo,
-            issue_number: github.context.issue.number,
-            labels: [label],
-          });
-
