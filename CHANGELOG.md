@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/fretboarder/citemplate/compare/v0.1.9...v0.1.10) (2023-10-08)
+
+
+### Bug Fixes
+
+* first commit for cookiecutter ([df26803](https://github.com/fretboarder/citemplate/commit/df26803bc51c34188002be985f6ad223b0e352c5))
+
 ## [0.1.9](https://github.com/fretboarder/citemplate/compare/v0.1.8...v0.1.9) (2023-10-06)
 
 
