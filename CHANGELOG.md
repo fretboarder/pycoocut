@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/fretboarder/citemplate/compare/v0.1.10...v0.1.11) (2023-10-08)
+
+
+### Bug Fixes
+
+* add github user and readme ([#17](https://github.com/fretboarder/citemplate/issues/17)) ([9520d8c](https://github.com/fretboarder/citemplate/commit/9520d8cab75f3b6126efc19d5bb82a688e344e7b))
+
 ## [0.1.10](https://github.com/fretboarder/citemplate/compare/v0.1.9...v0.1.10) (2023-10-08)
 
 
