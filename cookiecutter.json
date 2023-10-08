@@ -4,5 +4,6 @@
     "initial_version": "0.1.0",
     "author": "Anonymous",
     "cli_command": "{{ cookiecutter.project_slug}}",
-    "python_dep": "^3.10"
+    "python_dep": "^3.11",
+    "github_user": "fretboarder"
 }
