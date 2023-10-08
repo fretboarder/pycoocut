@@ -4,13 +4,20 @@ version = "{{cookiecutter.initial_version}}"
 description = "{{cookiecutter.project_name}}"
 authors = ["{{cookiecutter.author}}"]
 readme = "README.md"
+{% if cookiecutter.project_layout == "src" -%}
+packages = [{ include = "src" }]
+{%- endif %}
 
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.python_dep }}"
 click = "^8.1.7"
 
 [tool.poetry.scripts]
-{{ cookiecutter.cli_command }} = '{{ cookiecutter.project_slug }}.main:main'
+{% if cookiecutter.project_layout == "src" -%}
+{{ cookiecutter.cli_command }} = "src.cli.main:main"
+{%- else -%}
+{{ cookiecutter.cli_command }} = "{{ cookiecutter.project_slug }}.main:main"
+{%- endif %}
 
 [tool.poetry.group.dev.dependencies]
 pytest-cov = "^4.1.0"
@@ -29,7 +36,7 @@ build-backend = "poetry.core.masonry.api"
 # McCabe complexity (`C901`) by default.
 select = ["ALL"]
 # select = ["E", "F"]
-ignore = ["D211", "D213", "ANN101"]
+ignore = ["D211", "D213", "ANN101", "INP001"]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
