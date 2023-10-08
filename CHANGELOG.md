@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/fretboarder/citemplate/compare/v0.1.14...v0.1.15) (2023-10-08)
+
+
+### Bug Fixes
+
+* release-please again ([94bdd59](https://github.com/fretboarder/citemplate/commit/94bdd590b4c68b64f94a7d9d7437a15325900cf3))
+
 ## [0.1.14](https://github.com/fretboarder/citemplate/compare/v0.1.13...v0.1.14) (2023-10-08)
 
 
