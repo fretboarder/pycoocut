@@ -46,7 +46,8 @@ jobs:
       run: |
         cd ${{github.workspace}}/test_project
         pip install --user poetry
-        poetry install
 
     - name: Run nox tests
-      run: poetry run nox
+      run: |
+        poetry install
+        poetry run nox
