@@ -12,6 +12,12 @@ on:
       - closed
 
 jobs:
+  print-context-info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print GitHub context contents
+      run: echo ${{ toJSON(github) }}
+
   lint-and-test:
     # we don't have to run on the release-please branch
     if: ${{ !startsWith(github.ref_name, 'release-please') }}
