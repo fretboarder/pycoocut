@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.18](https://github.com/fretboarder/citemplate/compare/v0.1.17...v0.1.18) (2023-10-08)
+
+
+### Bug Fixes
+
+* update cookiecutter ([d4a14ea](https://github.com/fretboarder/citemplate/commit/d4a14ea9bce35b1cdd681fbbf1225d36a19a2ab4))
+
 ## [0.1.17](https://github.com/fretboarder/citemplate/compare/v0.1.16...v0.1.17) (2023-10-08)
 
 
