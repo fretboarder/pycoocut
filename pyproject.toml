@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "citemplate"
-version = "0.1.18"
+version = "0.1.19"
 description = "My Python project template"
 authors = ["fretboarder <cini01@gmail.com>"]
 readme = "README.md"
