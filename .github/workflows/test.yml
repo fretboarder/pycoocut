@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print GitHub context contents
-      run: echo ${{ toJSON(github) }}
+      run: echo "${{ toJSON(github) }}"
 
   lint-and-test:
     # we don't want to run on the release-please branch
