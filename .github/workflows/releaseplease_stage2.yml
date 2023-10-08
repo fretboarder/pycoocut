@@ -1,0 +1,37 @@
+name: release please stage 2
+on:
+  push:
+    branches:
+    - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    # this job only runs when the original feature PR has been merged and tested
+    if: ${{ startsWith(github.ref, 'refs/heads/main') && contains(github.head_ref, 'release-please') }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: google-github-actions/release-please-action@v3
+      with:
+        release-type: python
+        package-name: citemplate
+        token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+
+    - name: Remove a Label from the Main Branch
+      uses: actions/github-script@v5
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const label = 'ready-for-release';
+          const context = github.context;
+
+          console.log(`Removing label '${label}' from '${context.ref}'`);
+          await github.issues.removeLabel({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            name: label,
+          });
