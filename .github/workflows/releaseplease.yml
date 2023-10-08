@@ -1,4 +1,4 @@
-name: release please stage 2
+name: release please
 on:
   push:
     branches:
@@ -11,7 +11,10 @@ permissions:
 
 jobs:
   release-please:
-    # this job only runs to create the final release
+    # this job only runs when a push to main/master happens
+    # -> it then creates a release PR and labels it
+    # upon merge of the release PR it runs again
+    # -> and creates the release
     runs-on: ubuntu-latest
     steps:
     - uses: google-github-actions/release-please-action@v3

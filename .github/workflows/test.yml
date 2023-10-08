@@ -13,7 +13,8 @@ on:
 
 jobs:
   lint-and-test:
-    if: ${{ !contains(github.head_ref, 'release-please') }}
+    # we don't have to run on the release-please branch
+    if: ${{ !startsWith(github.ref_name, 'release-please') }}
     runs-on: ubuntu-latest
 
     strategy:
