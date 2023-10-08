@@ -1,0 +1,50 @@
+name: Test Cookieutter
+
+on:
+  push:
+    branches:
+      - "*"
+      - "!master"
+      - "!main"
+
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  test-cutter:
+    if: ${{ !(startsWith(github.ref_name, 'release-please') || startsWith(github.head_ref, 'release-please'))}}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project-structure: ["flat", "src"]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.12"
+
+    - name: Install cookiecutter
+      run: pip install --user cookiecutter
+
+    - name: Run cookiecutter for ${{matrix.project-structure}} project structure
+      run: |
+        cookiecutter -f --no-input \
+          ${{github.workspace}} \
+          "project_name=Test Project" \
+          cli_command=testrun \
+          python_dep=^3.12 \
+          project_layout=${{matrix.project-structure}}
+          publish_workflow=false
+
+    - name: Install project
+      run: |
+        cd ${{github.workspace}}/test_project
+        pip install --user poetry
+        poetry install
+        poetry run nox
