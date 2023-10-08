@@ -12,8 +12,8 @@ on:
       - closed
 
 jobs:
-  # cookiecutter https://github.com/audreyfeldroy/cookiecutter-pypackage.git
   test-cutter:
+    if: ${{ !(startsWith(github.ref_name, 'release-please') || startsWith(github.head_ref, 'release-please'))}}
     runs-on: ubuntu-latest
 
     strategy:
@@ -44,7 +44,9 @@ jobs:
 
     - name: Install poetry
       run: |
-        pip install --user poetry
         cd ${{github.workspace}}/test_project
+        pip install --user poetry
         poetry install
-        poetry run nox
+
+    - name: Run nox tests
+      run: poetry run nox
