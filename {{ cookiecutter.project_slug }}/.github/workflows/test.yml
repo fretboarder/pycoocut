@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup-poetry:
-    if: ${{ !contains(github.head_ref, 'release-please') }}
+    if: {%raw%}${{ !contains(github.head_ref, 'release-please') }}{%endraw%}
     runs-on: ubuntu-latest
 
     strategy:
@@ -21,10 +21,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python {%raw%}${{ matrix.python-version }}{%endraw%}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: {%raw%}${{ matrix.python-version }}{%endraw%}
 
     - name: Install dependencies
       run: |
@@ -36,10 +36,10 @@ jobs:
         poetry install
 
     - name: Run ruff
-      run: poetry run ruff citemplate
+      run: poetry run ruff {{ cookiecutter.project_slug }}
 
     - name: Run mypy
-      run: poetry run mypy citemplate
+      run: poetry run mypy {{ cookiecutter.project_slug }}
 
     - name: Run tests with nox
       run: poetry run nox

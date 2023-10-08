@@ -1,16 +1,16 @@
 [tool.poetry]
-name = "citemplate"
-version = "0.1.9"
-description = "My Python project template"
-authors = ["fretboarder <cini01@gmail.com>"]
+name = "{{cookiecutter.project_slug}}"
+version = "{{cookiecutter.initial_version}}"
+description = "{{cookiecutter.project_name}}"
+authors = ["{{cookiecutter.author}}"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "{{ cookiecutter.python_dep }}"
 click = "^8.1.7"
 
 [tool.poetry.scripts]
-cli = 'citemplate.main:main'
+{{ cookiecutter.cli_command }} = '{{ cookiecutter.project_slug }}.main:main'
 
 [tool.poetry.group.dev.dependencies]
 pytest-cov = "^4.1.0"
@@ -79,6 +79,6 @@ convention = "google"
 
 
 [tool.pytest.ini_options]
-pythonpath = "citemplate"
+pythonpath = "{{cookiecutter.project_slug}}"
 addopts = "-rA -q"
 testpaths = ["tests"]

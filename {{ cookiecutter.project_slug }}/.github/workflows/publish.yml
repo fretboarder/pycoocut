@@ -1,0 +1,35 @@
+name: publish to pypi
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-package:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python {%raw%}${{ matrix.python-version }}{%endraw%}
+      uses: actions/setup-python@v2
+      with:
+        python-version: {%raw%}${{ matrix.python-version }}{%endraw%}
+
+    - name: Install dependencies
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+
+    - name: Prepare poetry
+      run: |
+       poetry config virtualenvs.in-project true
+       poetry config repositories.testpypi https://test.pypi.org/legacy/
+       poetry config pypi-token.testpypi {%raw%}${{ secrets.PYPI_TEST_TOKEN }}{%endraw%}
+
+    - name: Build and Publish
+      run: poetry publish --build -r testpypi
