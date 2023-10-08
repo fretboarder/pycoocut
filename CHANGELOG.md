@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.17](https://github.com/fretboarder/citemplate/compare/v0.1.16...v0.1.17) (2023-10-08)
+
+
+### Bug Fixes
+
+* restrict lint-and-test ([533d364](https://github.com/fretboarder/citemplate/commit/533d364cfcb5de38310e620630241db1b6e3f360))
+
 ## [0.1.16](https://github.com/fretboarder/citemplate/compare/v0.1.15...v0.1.16) (2023-10-08)
 
 
