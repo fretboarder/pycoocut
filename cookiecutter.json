@@ -9,5 +9,6 @@
     "project_layout": [
         "flat",
         "src"
-    ]
+    ],
+    "publish_workflow": true
 }

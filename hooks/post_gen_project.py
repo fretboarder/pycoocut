@@ -1,7 +1,9 @@
+from pathlib import Path
 import shutil as sh
 
 layout = "{{ cookiecutter.project_layout }}"
 slug = "{{ cookiecutter.project_slug }}"
+publish_workflow = "{{ cookiecutter.publish_workflow }}"
 
 if layout == "src":
     sh.rmtree(slug)
@@ -9,3 +11,7 @@ if layout == "src":
 elif layout == "flat":
     sh.rmtree("src")
     print("removed path 'src'")
+
+if publish_workflow.lower() in ["0", "false", "f", "no", "n", "off"]:
+    Path(".github/workflows/publish.yml").unlink()
+    print("removed publish.yml workflow")
