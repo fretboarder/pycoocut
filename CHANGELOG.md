@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.13](https://github.com/fretboarder/citemplate/compare/v0.1.12...v0.1.13) (2023-10-08)
+
+
+### Bug Fixes
+
+* testing release workflows ([8f9975c](https://github.com/fretboarder/citemplate/commit/8f9975ce301aff633b164c91c464c90de746a263))
+
 ## [0.1.12](https://github.com/fretboarder/citemplate/compare/v0.1.11...v0.1.12) (2023-10-08)
 
 
