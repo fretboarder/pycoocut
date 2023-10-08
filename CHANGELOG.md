@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.19](https://github.com/fretboarder/citemplate/compare/v0.1.18...v0.1.19) (2023-10-08)
+
+
+### Bug Fixes
+
+* mypy in nox ([c8f5664](https://github.com/fretboarder/citemplate/commit/c8f566439f37cbc1186ddc39088b3ac20973b2d2))
+
 ## [0.1.18](https://github.com/fretboarder/citemplate/compare/v0.1.17...v0.1.18) (2023-10-08)
 
 
