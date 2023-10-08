@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0](https://github.com/fretboarder/pycoocut/compare/v0.3.0...v0.4.0) (2023-10-08)
+
+
+### Features
+
+* don't run on release-please ([5ea882e](https://github.com/fretboarder/pycoocut/commit/5ea882ecda6750f58824cedd8a78141ad905aaa4))
+* leave only cookiecutter in root ([90374a8](https://github.com/fretboarder/pycoocut/commit/90374a86ae71b58b9eefa13814edcb14f4277aee))
+
+
+### Bug Fixes
+
+* invoke cookiecutter correctly ([ea97abf](https://github.com/fretboarder/pycoocut/commit/ea97abf6be9086d4edf15b5cebc1d1a2c5d2e6ff))
+* once again fix the workflow ([d4d8b26](https://github.com/fretboarder/pycoocut/commit/d4d8b267acbcd8ac40d5eeafb544e1de15ac533d))
+* run from workspace directory ([ff50c1c](https://github.com/fretboarder/pycoocut/commit/ff50c1c41a368d479fab2e3d41d2a9d871124f52))
+* test workflow fixed ([4e5139c](https://github.com/fretboarder/pycoocut/commit/4e5139c17d2161b78c5ab358802205caa51c6b68))
+
 ## [0.3.0](https://github.com/fretboarder/citemplate/compare/v0.2.0...v0.3.0) (2023-10-08)
 
 
