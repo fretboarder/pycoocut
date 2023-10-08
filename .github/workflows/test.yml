@@ -3,7 +3,10 @@ name: lint and test
 on:
   push:
     branches:
-      - "*-dev"
+      - "*"
+      - "!master"
+      - "!main"
+
   pull_request:
     types:
       - closed
@@ -42,4 +45,4 @@ jobs:
       run: poetry run mypy citemplate
 
     - name: Run tests with nox
-      run: poetry run nox
+      run: poetry run nox -s pytest
