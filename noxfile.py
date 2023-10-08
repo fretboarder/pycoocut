@@ -10,7 +10,7 @@ def ruff(session: nox.Session):
 
 @nox.session
 def mypy(session: nox.Session):
-    """Running ruff"""
+    """Running mypy"""
     session.install("mypy", "click")
     session.run("mypy", "citemplate")
 

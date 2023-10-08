@@ -10,8 +10,8 @@ def ruff(session: nox.Session):
 
 @nox.session
 def mypy(session: nox.Session):
-    """Running ruff"""
-    session.install("ruff", "click")
+    """Running mypy"""
+    session.install("mypy", "click")
     session.run("mypy", "{{cookiecutter.project_slug}}")
 
 
