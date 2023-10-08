@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.12](https://github.com/fretboarder/citemplate/compare/v0.1.11...v0.1.12) (2023-10-08)
+
+
+### Bug Fixes
+
+* improve label handling ([b9294a5](https://github.com/fretboarder/citemplate/commit/b9294a512398d0a75d12b29709526edf6f932722))
+* no labels for branches workflow ([ce33e06](https://github.com/fretboarder/citemplate/commit/ce33e061f7a501d2d096ebc4199291236f33c1a6))
+
 ## [0.1.11](https://github.com/fretboarder/citemplate/compare/v0.1.10...v0.1.11) (2023-10-08)
 
 
