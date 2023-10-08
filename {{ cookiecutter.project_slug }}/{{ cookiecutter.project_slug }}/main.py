@@ -2,7 +2,7 @@
 
 import click
 
-from citemplate import _version
+from {{cookiecutter.project_slug}} import _version
 
 
 class Point2D:
