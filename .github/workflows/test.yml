@@ -17,10 +17,11 @@ jobs:
     steps:
     - name: Print GitHub context contents
       run: echo "${{ toJSON(github) }}"
+      continue-on-error: true
 
   lint-and-test:
-    # we don't want to run on the release-please branch
-    if: ${{ !startsWith(github.ref_name, 'release-please') }}
+    # we don't want to run on the release-please branch or when the release-please branch has been merged
+    if: ${{ !(startsWith(github.ref_name, 'release-please') || startsWith(github.head_ref, 'release-please'))}}
     runs-on: ubuntu-latest
 
     strategy:
