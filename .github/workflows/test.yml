@@ -56,13 +56,12 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const label = 'ready-for-release';
-          const context = github.context;
 
-          console.log(`Adding label '${label}' to '${context.ref}'`);
+          console.log(`Adding label '${label}' to '${github.context.ref}'`);
           await github.issues.addLabels({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.issue.number,
+            owner: github.context.repo.owner,
+            repo: github.context.repo.repo,
+            issue_number: github.context.issue.number,
             labels: [label],
           });
 
