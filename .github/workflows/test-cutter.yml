@@ -42,12 +42,9 @@ jobs:
           project_layout=${{matrix.project-structure}}
           publish_workflow=false
 
-    - name: Install poetry
+    - name: Install project
       run: |
         cd ${{github.workspace}}/test_project
         pip install --user poetry
-
-    - name: Run nox tests
-      run: |
         poetry install
         poetry run nox
