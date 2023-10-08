@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - main
+    - master
 
 permissions:
   contents: write
@@ -11,7 +12,6 @@ permissions:
 jobs:
   release-please:
     # this job only runs to create the final release
-    if: ${{ startsWith(github.ref, 'refs/heads/main') && contains(github.head_ref, 'release-please') }}
     runs-on: ubuntu-latest
     steps:
     - uses: google-github-actions/release-please-action@v3
