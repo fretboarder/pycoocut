@@ -1,5 +1,6 @@
-from pathlib import Path
+"""Cookiecutter hooks."""
 import shutil as sh
+from pathlib import Path
 
 layout = "{{ cookiecutter.project_layout }}"
 slug = "{{ cookiecutter.project_slug }}"
