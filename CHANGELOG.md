@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/fretboarder/pycoocut/compare/v0.4.0...v0.4.1) (2023-11-13)
+
+
+### Bug Fixes
+
+* new settings and dependencies ([224b85d](https://github.com/fretboarder/pycoocut/commit/224b85d29199f52ea6a5277596819af68bf802ab))
+
 ## [0.4.0](https://github.com/fretboarder/pycoocut/compare/v0.3.0...v0.4.0) (2023-10-08)
 
 
